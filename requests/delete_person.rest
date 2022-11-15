@@ -1,0 +1,9 @@
+DELETE http://localhost:3001/persons/kdoodd
+
+####
+
+PUT http://localhost:3001/persons/636a33b620cfb325643a40d7
+content-type: application/json
+
+{
+"number": 1212}

@@ -1,0 +1,27 @@
+{
+  "name": "phonebook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build:ui": "rm -rf build && cd ../../part1-2/part2/phonebook && npm run build && cp -r build ../../../part3/phonebook",
+    "deploy": "git add . && git commit -m 'committing app `date`' && git push heroku master",
+    "deploy:full": "npm run build:ui && npm run deploy",
+    "logs:prod": "heroku logs --tail"
+  },
+  "author": "Izie Wood",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "nodemon": "^2.0.20"
+  }
+}
